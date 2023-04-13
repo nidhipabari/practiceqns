@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function del(a, n) {
+            let count = {};
+            let res = [];
+            let aLen = a.length;
+
+            for (let i = 0; i < aLen; i++) {
+                let num = a[i];
+            }
+
+            if (!count[num]) {
+                count[num] = 1;
+                res.push(num);
+            }
+
+            else if (count[num] < n) {
+                count[num]++;
+                res.push(num);
+            }
+
+            return res;
+
+        }
+
+        let input = [1, 2, 3, 1, 2, 1, 2, 3];
+        let output = del(input, 2);
+        console.log(output);
+    </script>
+</body>
+
+</html>
